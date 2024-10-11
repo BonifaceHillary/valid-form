@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styl.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+
+
+    <!-- <h1>please select your choice</h1> -->
+
+
+    <div class="hero">
+        <div class="selector">
+            <div id="selectField">
+                <p id="selectText">select social media</p>
+                <i class="fa-solid fa-chevron-down" id="chevron"></i>
+            </div>
+            <ul id="list" class="hide">
+                <li>
+                <li class="options-icon">
+                    <i class="fa-brands fa-facebook"></i>
+                    <p>facbook</p>
+                </li>
+                <li class="options-icon">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <p>whatsapp</p>
+                </li>
+                <li class="options-icon">
+                    <i class="fa-brands fa-twitter"></i>
+                    <p>twitter</p>
+                </li>
+                <li class="options-icon">
+                    <i class="fa-brands fa-instagram" style="color: rgb(252, 204, 99);"></i>
+                    <p>instagram</p>
+                </li>
+                <li class="options-icon">
+                    <i class="fa-brands fa-youtube" style="color: red;"></i>
+                    <p>youtube</p>
+
+                </li>
+                <li class="options-icon">
+                    <i class="fa-brands fa-telegram" style="color: rgb(64, 93, 230);"></i>
+                    <p>telegram</p>
+                </li>
+                </li>
+            </ul>
+
+        </div>
+
+    </div>
+
+
+    <script>
+
+        var selectField = document.getElementById("selectField");
+        var selectText = document.getElementById("selectText");
+        var options = document.getElementsByClassName("options-icon");
+        var list = document.getElementById("list");
+        var chevron = document.getElementById("chevron");
+
+        selectField.onclick = function(){
+            list.classList.toggle("hide");
+            chevron.classList.toggle("rotate");
+
+        }
+
+        for(option of options){
+            option.onclick = function(){
+                selectText.innerHTML = this.textContent
+                list.classList.toggle("hide");
+                chevron.classLst.toggle("rotate");
+
+            }
+        }
+
+    </script>
+
+
+
+</body>
+</html>
+
